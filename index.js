@@ -6,6 +6,8 @@ function getFirstSelector(selector){
   }
 }
 
-function nestedTarget(nested, target){
-  return nested.querySelector(target)
+function nestedTarget(){
+  var nestedId= document.getElementById(nested)
+  var targetClass= nestedId.getElementsByClass(target)
+  return targetClass
 }
