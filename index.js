@@ -7,6 +7,17 @@ function getFirstSelector(selector){
 }
 
 function nestedTarget(){
-  document.querySelector(nested)
-  return targetClass(nestedId)
+  var nestedId= document.querySelector('#nested .target')
+  return nestedId
+}
+
+function deepestChild(){
+  return document.querySelector('#grand-node div div div div')
+}
+
+function increaseRankBy(n){
+  var listItems=document.getElementById('app').querySelectorAll('ul.ranked-list li')
+  for (var i=0, I=listItems.length; i<I; i++){
+    listItems[i].innerHTML= (parseInt(listItems[i].innerHTML)+n)
+  }
 }
